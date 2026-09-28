@@ -457,3 +457,6 @@ DSA as a supporting skill for a full-stack and AI engineer, not a competitive pr
 - Never move to the next phase until the current one's exercises are solved and can be re-explained without notes.
 - Always test with the standard edge-case set before considering a solution correct.
 - Never memorize a solution instead of understanding the state/transition or the pattern behind it.
+
+---
+

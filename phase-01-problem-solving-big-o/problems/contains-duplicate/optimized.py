@@ -9,12 +9,11 @@
 # whether a number was already seen without scanning the list.
 
 
-
 def contains_duplicate(numbers):
 
     seen = set()
 
-    for num in  numbers:
+    for num in numbers:
         if num in seen:
             return True
         seen.add(num)
@@ -22,14 +21,11 @@ def contains_duplicate(numbers):
     return False
 
 
-
 print(contains_duplicate([4, 7, 2, 4, 9]))
 print(contains_duplicate([1, 2, 3, 4]))
 print(contains_duplicate([]))
 print(contains_duplicate([0, 0, 0]))
 print(contains_duplicate([-5]))
-
-
 
 
 # edge cases
