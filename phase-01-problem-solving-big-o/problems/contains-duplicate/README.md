@@ -68,3 +68,80 @@ The process is:
 **Problem Brute Force Identify Bottleneck Improve Bottleneck  Analyze Complexity**
 
 For this problem, we replaced repeated comparisons with set membership checks, reducing the average time complexity from **O(n²)** to **O(n)** at the cost of additional space.
+
+## Learning Tracker
+
+### Concepts Practiced
+
+* [x] Understand the problem
+* [x] Identify input and output
+* [x] Identify edge cases
+* [x] Build a brute-force solution
+* [x] Identify the bottleneck
+* [x] Optimize using a `set`
+* [x] Test the brute-force solution
+* [x] Test the optimized solution
+* [x] Analyze time complexity
+* [x] Analyze space complexity
+* [x] Compare time-space tradeoffs
+
+### Complexity Lessons
+
+This problem was also used to practice the difference between **time complexity** and **space complexity**.
+
+A loop does not automatically mean O(n) space.
+
+The important question for space complexity is:
+
+> Does the extra memory grow as the input grows?
+
+For example:
+
+```python
+count = 0
+
+for number in numbers:
+    count += 1
+```
+
+The time complexity is O(n), but the extra space is O(1) because `count` remains one variable.
+
+In contrast:
+
+```python
+seen = set()
+
+for number in numbers:
+    seen.add(number)
+```
+
+The set can grow with the input, so the extra space is O(n).
+
+### Best, Average, and Worst Case
+
+The problem was also used to practice how an algorithm can have different performance depending on the input.
+
+* **Best case:** minimum amount of work
+* **Average case:** expected or typical amount of work
+* **Worst case:** maximum amount of work
+
+For the linear search example:
+
+```text
+Best case    = O(1)
+Average case = O(n)
+Worst case   = O(n)
+```
+
+### Main Learning
+
+The main lesson from this problem was not only how to detect duplicates.
+
+It was learning to look at an algorithm in two dimensions:
+
+```text
+Time:  How much work grows with n?
+Space: How much extra memory grows with n?
+```
+
+Optimization can improve time complexity while using more memory.
