@@ -15,9 +15,9 @@ This phase strengthens array and string fundamentals and introduces common probl
 ## Problems
 
 - [x] `reverse-array`
-- [ ] `prefix-sum`
-- [ ] `palindrome`
-- [ ] `group-anagrams`
+- [x] `prefix-sum`
+- [x] `palindrome`
+- [x] `group-anagrams`
 
 ## Current Progress
 
