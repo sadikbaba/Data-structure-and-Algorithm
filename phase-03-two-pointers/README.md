@@ -56,8 +56,8 @@ Given a new sorted-array problem:
 - [x] Two-pointer mental model
 - [x] Left/right pointers
 - [x] Fast/slow pointers
-- [ ] Remove duplicates
-- [ ] Pair sum
-- [ ] Reverse string
-- [ ] Complexity comparison
-- [ ] Phase 3 exit check
+- [x] Remove duplicates
+- [x] Pair sum
+- [x] Reverse string
+- [x] Complexity comparison
+- [x] Phase 3 exit check
