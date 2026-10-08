@@ -11,7 +11,6 @@ def count_frequency(text):
     return counts
 
 
-
 if __name__ == "__main__":
     text = "abba"
     print(count_frequency(text))

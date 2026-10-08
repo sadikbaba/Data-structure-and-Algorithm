@@ -1,7 +1,7 @@
 def is_palindrome(text):
 
     left = 0
-    right = len(text) -1
+    right = len(text) - 1
 
     while left < right:
         if text[left] == text[right]:
