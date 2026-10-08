@@ -21,9 +21,9 @@ Phase 2: Arrays and Strings
 
 ## Problems
 
-- [ ] Remove duplicates from a sorted array in place
-- [ ] Find a pair in a sorted array that sums to a target
-- [ ] Reverse a string using two pointers
+- [x] Remove duplicates from a sorted array in place
+- [x] Find a pair in a sorted array that sums to a target
+- [x] Reverse a string using two pointers
 
 ## Skills to Gain
 
