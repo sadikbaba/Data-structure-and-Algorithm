@@ -3,7 +3,12 @@ class Node:
         self.value = value
         self.next = None
 
+def traverse(head):
+    current = head
 
+    while current is not None:
+        print(current.value)
+        current = current.next
 
 
 
@@ -14,15 +19,6 @@ third_node = Node(15)
 first_node.next = second_node
 second_node.next = third_node
 
-
-
-
-def traverse(head):
-    current = head
-
-    while current is not None:
-        print(current.value)
-        current = current.next
 
 
 # print(first_node.value)        # 5
