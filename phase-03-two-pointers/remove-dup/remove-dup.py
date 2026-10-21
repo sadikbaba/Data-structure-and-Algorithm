@@ -20,8 +20,6 @@ numbers = [1, 1, 2, 2, 3]
 print(remove_duplicates_brute_force(numbers))
 
 
-
-
 ## Remove duplicates in place using fast and slow pointers.
 def remove_duplicates(numbers):
     if not numbers:
@@ -48,16 +46,16 @@ print("edge cases")
 
 numbers = []
 unique_count = remove_duplicates(numbers)
-print(numbers[:unique_count])       # []
+print(numbers[:unique_count])  # []
 
 numbers = [1]
 unique_count = remove_duplicates(numbers)
-print(numbers[:unique_count])       # [1]
+print(numbers[:unique_count])  # [1]
 
 numbers = [1, 1, 1, 1]
 unique_count = remove_duplicates(numbers)
-print(numbers[:unique_count])       # [1]
+print(numbers[:unique_count])  # [1]
 
 numbers = [1, 2, 3, 4]
 unique_count = remove_duplicates(numbers)
-print(numbers[:unique_count])       # [1, 2, 3, 4]
+print(numbers[:unique_count])  # [1, 2, 3, 4]

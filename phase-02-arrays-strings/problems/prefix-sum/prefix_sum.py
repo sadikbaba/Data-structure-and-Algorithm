@@ -10,6 +10,7 @@ def build_prefix_sum(numbers):
 
     return prefix
 
+
 def range_sum(prefix, left, right):
 
     if left == 0:

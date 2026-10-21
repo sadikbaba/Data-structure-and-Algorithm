@@ -12,14 +12,12 @@ def max_sum_brute_force(nums, k):
     return max_sum
 
 
-
-
 def max_sum_sliding_window(nums, k):
     n = len(nums)
     if n < k:
         return None
 
-    window_sum =  sum(nums[:k])
+    window_sum = sum(nums[:k])
     max_sum = window_sum
     for i in range(k, n):
         window_sum += nums[i] - nums[i - k]
@@ -28,8 +26,7 @@ def max_sum_sliding_window(nums, k):
     return max_sum
 
 
-
 numbers = [4, 2, 7, 1, 8]
 k = 3
-print(max_sum_brute_force(numbers, k))  
+print(max_sum_brute_force(numbers, k))
 print(max_sum_sliding_window(numbers, k))
