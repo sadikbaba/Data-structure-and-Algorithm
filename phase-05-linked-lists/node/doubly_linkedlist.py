@@ -87,8 +87,6 @@ class DoublyLinkedList:
 
         current = self.head
 
-        self.tail = self.head
-
         while current is not None:
             current.prev, current.next = current.next, current.prev
             current = current.prev
@@ -105,18 +103,136 @@ class DoublyLinkedList:
         while fast is not None and fast.next is not None:
             slow = slow.next
             fast = fast.next.next
-        return slow
+        return slow.value
+
+    def has_cycle(self):
+        slow = self.head
+        fast = self.head
+
+        while fast is not None and fast.next is not None:
+            slow = slow.next
+            fast = fast.next.next
+
+            if slow == fast:
+                return True
+
+        return False
+
+    
+
+def merge_sorted(list_a, list_b):
+
+    if list_a.head is None:
+        return list_b
+    if list_b.head is None:
+        return list_a
+
+    merged = DoublyLinkedList()
+    
+    current_a = list_a.head
+    current_b = list_b.head
+
+    while current_a is not None and current_b is not None:
+        if current_a.value <= current_b.value:
+            merged.append(current_a.value)
+            current_a = current_a.next
+        else:
+            merged.append(current_b.value)
+            current_b = current_b.next
+    while current_a is not None:
+        merged.append(current_a.value)
+        current_a = current_a.next
+
+    while current_b is not None:
+        merged.append(current_b.value)
+        current_b = current_b.next
+    return merged
+
+        
 
 
 if __name__ == "__main__":
+    # Test 1: Odd number of nodes
     linked_list = DoublyLinkedList()
-
     linked_list.append(5)
     linked_list.append(10)
     linked_list.append(15)
-    linked_list.prepend(2)
+    linked_list.append(20)
+    linked_list.append(25)
 
-    linked_list.traverse_forward()
+    
+    print("Odd list middle:", linked_list.find_middle())
+    # Expected: 15
+
+    # Test 2: Even number of nodes
+    linked_list = DoublyLinkedList()
+    linked_list.append(5)
+    linked_list.append(10)
+    linked_list.append(15)
+    linked_list.append(20)
+
     print("\n")
-    linked_list.traverse_backward()
-print("\nRe")
+    print("Even list middle:", linked_list.find_middle())
+    # Expected: 10
+    # Your version returns the FIRST middle
+
+    # Test 3: One node
+    linked_list = DoublyLinkedList()
+    linked_list.append(5)
+
+    print("\n")
+    print("Single node middle:", linked_list.find_middle())
+    # Expected: 5
+
+    # Test 4: Empty list
+    linked_list = DoublyLinkedList()
+    print("\n")
+    print("Empty list middle:", linked_list.find_middle())
+    # Expected: None
+
+    # Test 1: No cycle
+    linked_list = DoublyLinkedList()
+    linked_list.append(5)
+    linked_list.append(10)
+    linked_list.append(15)
+    print("\n")
+    print("No cycle:", linked_list.has_cycle())
+    # Expected: False
+
+    # Test 2: Has cycle
+    linked_list = DoublyLinkedList()
+    linked_list.append(5)
+    linked_list.append(10)
+    linked_list.append(15)
+
+    # Make 15 point back to 10
+    linked_list.tail.next = linked_list.head.next
+    print("\n")
+    print("Has cycle:", linked_list.has_cycle())
+    # Expected: True
+    print("\n")
+
+    list_a = DoublyLinkedList()
+    list_a.append(1)
+    list_a.append(4)
+    list_a.append(7)
+
+    list_b = DoublyLinkedList()
+    list_b.append(2)
+    list_b.append(3)
+    list_b.append(8)
+
+    merged = merge_sorted(list_a, list_b)
+    
+    print("Merged list:")
+    merged.traverse_forward()
+
+    # Test 3: Merge with empty list
+    empty_list = DoublyLinkedList()
+
+    merged = merge_sorted(empty_list, list_b)
+
+    print("\n")
+    print("Merge with empty list:")
+    merged.traverse_forward()
+
