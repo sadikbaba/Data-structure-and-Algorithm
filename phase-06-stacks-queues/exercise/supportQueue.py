@@ -15,7 +15,7 @@ class SupportQueue:
             while self.in_stack:
                 self.out_stack.append(self.in_stack.pop())
 
-        return self.out_stack.pop()   # call the method
+        return self.out_stack.pop()  # call the method
 
     def peek(self):
         if self.is_empty():
@@ -42,8 +42,8 @@ if __name__ == "__main__":
 
     queue.enqueue("D")
 
-    print(queue.peek())     # B
+    print(queue.peek())  # B
     print(queue.dequeue())  # B
     print(queue.dequeue())  # C
     print(queue.dequeue())  # D
-    print(queue.is_empty()) # True
+    print(queue.is_empty())  # True

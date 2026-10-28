@@ -118,7 +118,6 @@ class DoublyLinkedList:
 
         return False
 
-    
 
 def merge_sorted(list_a, list_b):
 
@@ -128,7 +127,7 @@ def merge_sorted(list_a, list_b):
         return list_a
 
     merged = DoublyLinkedList()
-    
+
     current_a = list_a.head
     current_b = list_b.head
 
@@ -148,8 +147,6 @@ def merge_sorted(list_a, list_b):
         current_b = current_b.next
     return merged
 
-        
-
 
 if __name__ == "__main__":
     # Test 1: Odd number of nodes
@@ -160,7 +157,6 @@ if __name__ == "__main__":
     linked_list.append(20)
     linked_list.append(25)
 
-    
     print("Odd list middle:", linked_list.find_middle())
     # Expected: 15
 
@@ -223,7 +219,7 @@ if __name__ == "__main__":
     list_b.append(8)
 
     merged = merge_sorted(list_a, list_b)
-    
+
     print("Merged list:")
     merged.traverse_forward()
 
@@ -235,4 +231,3 @@ if __name__ == "__main__":
     print("\n")
     print("Merge with empty list:")
     merged.traverse_forward()
-

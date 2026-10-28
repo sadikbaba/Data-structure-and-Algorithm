@@ -1,5 +1,6 @@
 "LIFO means last in First out"
 
+
 class Stack:
     def __init__(self):
         self.items = []
@@ -24,7 +25,6 @@ class Stack:
 
 
 if __name__ == "__main__":
-
     stack = Stack()
     stack.push(1)
     stack.push(2)
@@ -32,21 +32,19 @@ if __name__ == "__main__":
     stack.push(4)
     stack.push(5)
 
-    
-    print(stack.peek()) # 5
-    print(stack.size()) # 5
-    print(stack.pop()) # 5
-    print(stack.peek()) # 4
-    print(stack.size()) # 4
-    print(stack.pop()) # 4
-    print(stack.peek()) # 3
-    print(stack.size()) # 3
-    print(stack.pop()) # 3
-    print(stack.peek()) # 2
-    print(stack.size()) # 2
-    print(stack.pop()) # 2
-    print(stack.peek()) # 1
-    print(stack.size()) # 1
-    print(stack.pop()) # 1
-    print(stack.is_empty()) # True
-
+    print(stack.peek())  # 5
+    print(stack.size())  # 5
+    print(stack.pop())  # 5
+    print(stack.peek())  # 4
+    print(stack.size())  # 4
+    print(stack.pop())  # 4
+    print(stack.peek())  # 3
+    print(stack.size())  # 3
+    print(stack.pop())  # 3
+    print(stack.peek())  # 2
+    print(stack.size())  # 2
+    print(stack.pop())  # 2
+    print(stack.peek())  # 1
+    print(stack.size())  # 1
+    print(stack.pop())  # 1
+    print(stack.is_empty())  # True

@@ -27,13 +27,13 @@ if __name__ == "__main__":
     queue.enqueue(4)
     queue.enqueue(5)
 
-    print(queue.peek()) # 1
-    print(queue.dequeue()) # 1
-    print(queue.peek()) # 2
-    print(queue.dequeue()) # 2
-    print(queue.peek()) # 3
-    print(queue.dequeue()) # 3
-    print(queue.peek()) # 4
-    print(queue.dequeue()) # 4
-    print(queue.peek()) # 5
-    print(queue.dequeue()) # 5
+    print(queue.peek())  # 1
+    print(queue.dequeue())  # 1
+    print(queue.peek())  # 2
+    print(queue.dequeue())  # 2
+    print(queue.peek())  # 3
+    print(queue.dequeue())  # 3
+    print(queue.peek())  # 4
+    print(queue.dequeue())  # 4
+    print(queue.peek())  # 5
+    print(queue.dequeue())  # 5

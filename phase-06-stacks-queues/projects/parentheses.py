@@ -5,18 +5,24 @@ def is_valid_parentheses(text):
     stack = []
 
     for char in text:
-        if char in '([{':
+        if char in "([{":
             stack.append(char)
-        elif char in ')]}':
+        elif char in ")]}":
             if len(stack) == 0:
                 return False
-            
-            if char == ')' and stack[-1] == '(' or char == '}' and stack[-1] == '{' or char == ']' and stack[-1] == '[':
+
+            if (
+                char == ")"
+                and stack[-1] == "("
+                or char == "}"
+                and stack[-1] == "{"
+                or char == "]"
+                and stack[-1] == "["
+            ):
                 stack.pop()
             else:
                 return False
-        
-        
+
     return stack == []
 
 
@@ -30,5 +36,4 @@ if __name__ == "__main__":
     print(is_valid_parentheses("())"))
     print(is_valid_parentheses("()[]{}"))
     print(is_valid_parentheses("{[()]}"))
-    print(is_valid_parentheses("[({]})]"))  
-    
+    print(is_valid_parentheses("[({]})]"))
