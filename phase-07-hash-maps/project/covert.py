@@ -16,8 +16,14 @@ def attach_usernames(accounts, transactions):
 
 # to this O(n)
 def attach_usernames_convert(accounts, transactions):
+
     # Build lookup: user_id → username  (O(m))
-    user_lookup = {account["user_id"]: account["username"] for account in accounts}
+    user_lookup = {}
+
+    for account in accounts:
+        user_id = account["user_id"]
+        username = account["username"]
+        user_lookup[user_id] = username
 
     result = []
     for txn in transactions:                          # O(n)
@@ -36,7 +42,7 @@ if __name__ == "__main__":
         {"user_id": 20, "username": "yusuf"},
         {"user_id": 30, "username": "zainab"},
     ]
-    
+
     transactions = [
         {"id": "TX1", "user_id": 20},
         {"id": "TX2", "user_id": 10},

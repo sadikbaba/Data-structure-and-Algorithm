@@ -1,7 +1,8 @@
 def find_product(products, product_id):
     lookup = {}
     for product in products:
-        lookup[product["id"]] = product
+        product_id = product["id"]
+        lookup[product_id] = product
     
     return lookup.get(product_id)
 
