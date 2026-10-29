@@ -1,5 +1,4 @@
 def find_duplicates(transactions):
-
     seen = set()
     count = set()
     dup = []
