@@ -45,13 +45,46 @@ def generate_subsets(items):
     return results
 
 
+def generate_permutations(items):
+    results = []
+    current = []
+
+    def backtrack():
+        # Have we arranged every item?
+        if len(current) == len(items):
+            results.append(current.copy())
+            return
+
+        # Try every available item
+        for item in items:
+            if item in current:
+                continue
+
+            # Choose
+            current.append(item)
+
+            # Explore
+            backtrack()
+
+            # Undo
+            current.pop()
+
+    backtrack()
+    return results
+
+
 
 if __name__ == "__main__":
-    numbers = [1, 2]
+
+    numbers = [1, 2,]
     print(backtracking(numbers))
-
-
+    print("\n")
     print(generate_subsets(["A", "B"]))
-    print(generate_subsets(["A", "B", "C"]))
-
+    print("\n")
+    print(generate_subsets(["A", "B", "C", ]))
+    print("\n")
     print(generate_subsets(numbers))
+
+    # permutations
+    print("\n")
+    print(generate_permutations(["A", "B", "C"]))
