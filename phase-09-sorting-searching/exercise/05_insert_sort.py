@@ -14,4 +14,13 @@ if __name__ == "__main__":
     numbers = [5, 3, 8, 2, 1]
     print(insertion_sort(numbers))   # [1, 2, 3, 5, 8]
 
+    print(insertion_sort([5, 3, 8, 2, 1]))
+
+    print(insertion_sort([1, 2, 3, 4, 5]))
+
+    print(insertion_sort([5, 4, 3, 2, 1]))
+
+    print(insertion_sort([4, 2, 4, 1, 2]))
+    print(insertion_sort([]))
+
 
